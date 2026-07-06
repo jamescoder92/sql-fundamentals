@@ -1,0 +1,17 @@
+# SQLite database journals
+*.db-journal
+*.sqlite-journal
+
+# SQLite WAL files
+*.db-wal
+*.db-shm
+
+# VS Code
+.vscode/
+
+# Python
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store
