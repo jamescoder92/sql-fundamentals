@@ -1,0 +1,71 @@
+-- ==========================================================
+-- SQL Fundamentals
+-- Lesson 1: Creating Your First SQLite Database
+-- ==========================================================
+
+-- NOTE:
+--
+-- SQLite databases are simply files.
+--
+-- Unlike MySQL or PostgreSQL, you do NOT use SQL to create
+-- the database itself.
+--
+-- Instead, create the database from your terminal.
+--
+-- ----------------------------------------------------------
+-- Terminal Command
+-- ----------------------------------------------------------
+--
+-- sqlite3 database/moringa.db
+--
+-- If the file does not exist, SQLite creates it automatically.
+--
+-- After running the command, you'll enter the SQLite shell:
+--
+-- sqlite>
+--
+-- ----------------------------------------------------------
+-- Useful SQLite Commands
+-- ----------------------------------------------------------
+--
+-- .databases
+--      Shows attached databases.
+--
+-- .tables
+--      Lists every table.
+--
+-- .schema
+--      Shows the database schema.
+--
+-- .quit
+--      Exit SQLite.
+--
+-- .headers on
+--      Show column names.
+--
+-- .mode table
+--      Display results in table format.
+--
+-- ----------------------------------------------------------
+-- SQL vs SQLite Commands
+-- ----------------------------------------------------------
+--
+-- Commands beginning with "." are SQLite shell commands.
+--
+-- They DO NOT end with a semicolon.
+--
+-- Example:
+--
+-- .tables
+--
+-- SQL statements ARE different.
+--
+-- Example:
+--
+-- SELECT * FROM employees;
+--
+-- SQL statements ALWAYS end with a semicolon.
+--
+-- Lesson Complete!
+--
+-- In Lesson 2 we'll create our first tables.
