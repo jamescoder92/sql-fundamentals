@@ -1,239 +1,202 @@
 # SQL Fundamentals
 
-Welcome to the SQL Fundamentals course.
+Welcome to **SQL Fundamentals**.
 
-In this course, we'll build a complete **Moringa School Employee Management System** from scratch using SQLite.
+In this course, you'll learn SQL by building a complete database for a fictional **Moringa School Employee Management System**.
 
-Instead of working with isolated examples, we'll gradually build a realistic database that models employees, departments, courses, trainers, and more.
+Rather than learning isolated commands, you'll gradually design a real database that models departments, employees, trainers, courses, students, and their relationships.
 
-Each lesson builds on the previous one, so by the end of the course you'll have designed a relational database and written increasingly powerful SQL queries.
-
----
-
-## What You'll Learn
-
-Throughout this course you'll learn how to:
-
-- Create databases
-- Create tables
-- Insert records
-- Retrieve data
-- Filter records
-- Sort results
-- Group data
-- Build relationships
-- Join multiple tables
-- Create many-to-many relationships
-- Write subqueries
+Each lesson builds on the previous one. By the end of the course, you'll have designed a relational database and written increasingly complex SQL queries to answer real business questions.
 
 ---
 
-## Project Structure
+# Learning Outcomes
 
-```
-sql-fundamentals/
-│
-├── README.md
-├── database/
-├── sql/
-└── assets/
-```
+By the end of this course, you should be able to:
+
+- Explain what a relational database is.
+- Create databases and tables.
+- Insert, update and delete data.
+- Retrieve data using SQL queries.
+- Filter records.
+- Sort query results.
+- Limit returned data.
+- Perform calculations using aggregate functions.
+- Group records.
+- Build one-to-many and many-to-many relationships.
+- Join multiple tables.
+- Write subqueries.
+- Create reusable database views.
 
 ---
 
-## Prerequisites
+# Prerequisites
 
-Install the following:
+Before beginning this course, ensure you have installed:
 
 - SQLite3
 - Visual Studio Code
-- SQLTools Extension (optional)
+- SQLTools (optional)
 - Git
 
-Verify SQLite is installed:
+Verify SQLite has been installed correctly.
 
 ```bash
 sqlite3 --version
 ```
 
-Example output:
+---
+
+# Repository Structure
 
 ```
-3.49.1
+sql-fundamentals/
+
+├── README.md
+├── assets/
+├── database/
+│   └── moringa.db
+└── sql/
+    ├── lesson_01_create_database.sql
+    ├── lesson_02_create_tables.sql
+    ├── lesson_03_insert_data.sql
+    └── ...
 ```
 
 ---
 
-# Lesson 1 — Creating Your First Database
+# About This Course
 
-## What is a Database?
+Each lesson contains four sections:
 
-A database is an organized collection of information.
+### Concepts
 
-Think of it as a digital filing cabinet.
-
-Inside a database we store:
-
-- Tables
-- Relationships
-- Records
-
-We'll be using **SQLite**, which stores an entire database inside a single file.
-
-For example:
-
-```
-moringa.db
-```
-
-That single file contains everything.
+New ideas introduced during the lesson.
 
 ---
 
-## Creating the Database
+### Notes
 
-Open your terminal.
-
-Navigate into the project folder.
-
-```
-cd sql-fundamentals
-```
-
-Create the database.
-
-```
-sqlite3 database/moringa.db
-```
-
-If successful you'll see:
-
-```
-SQLite version ...
-sqlite>
-```
-
-Congratulations!
-
-You've just created your first database.
-
-Notice that a new file now exists:
-
-```
-database/
-    moringa.db
-```
-
-SQLite automatically creates the database if it doesn't already exist.
+Important explanations, conventions and best practices.
 
 ---
 
-## SQLite Shell
+### Exercises
 
-The prompt
+Tasks for you to complete by writing your own SQL.
 
-```
-sqlite>
-```
-
-means you're connected to the database.
-
-From here you can execute SQL commands.
+Solutions are intentionally **not** included.
 
 ---
 
-## Useful SQLite Commands
+### Verification
 
-Show all databases currently attached:
+Commands you can use to confirm your work before continuing.
+
+---
+
+# Project
+
+Throughout the course we'll build a database for a fictional company.
+
+The system will eventually manage:
+
+- Departments
+- Employees
+- Trainers
+- Courses
+- Students
+- Skills
+- Enrolments
+
+Each lesson expands the database until it becomes a complete relational system.
+
+---
+
+# Conventions Used
+
+Throughout this course we'll follow common SQL conventions.
+
+## SQL Keywords
+
+SQL keywords are written in uppercase.
+
+Example:
 
 ```sql
-.databases
+SELECT *
+FROM employees;
 ```
 
-Show all tables:
+Although SQL is generally case-insensitive, uppercase keywords make queries easier to read.
 
-```sql
-.tables
+---
+
+## Naming Tables
+
+Table names use lowercase letters.
+
+Good examples:
+
+```
+employees
+departments
+courses
+employee_skills
 ```
 
-At the moment nothing will appear because we haven't created any tables yet.
+Avoid names like:
 
-Show the schema:
-
-```sql
-.schema
 ```
-
-Again, nothing will appear because the database is empty.
-
-Exit SQLite:
-
-```sql
-.quit
-```
-
-or
-
-```sql
-.exit
+EmployeeTable
+EmployeesData
+Table1
 ```
 
 ---
 
-## Important Notes
+## SQL Statements
 
-### SQL vs SQLite Commands
+SQL statements end with a semicolon.
 
-Commands beginning with a dot (`.`) are **SQLite shell commands**, not SQL.
-
-Examples:
-
-```
-.tables
-.schema
-.quit
-.headers on
-.mode table
-```
-
-These commands:
-
-- do **not** end with a semicolon (`;`)
-- only work inside the SQLite shell
-
-SQL statements are different.
-
-Examples:
+Example:
 
 ```sql
 SELECT * FROM employees;
 ```
 
-SQL statements **always end with a semicolon**.
+SQLite shell commands begin with a period (`.`) and **do not** end with a semicolon.
 
----
-
-## Checkpoint
-
-At the end of this lesson you should have:
-
-```
-sql-fundamentals/
-
-database/
-    moringa.db
-
-sql/
-
-README.md
-```
-
-and running
+Example:
 
 ```
 .tables
+.schema
+.quit
 ```
 
-should produce no output because the database is still empty.
+---
 
-In the next lesson we'll create our first table.
+# Course Progression
+
+| Lesson | Topic |
+|---------|-------|
+| 1 | Creating a Database |
+| 2 | Creating Tables |
+| 3 | Inserting Data |
+| 4 | Selecting Data |
+| 5 | Filtering Data |
+| 6 | Sorting Data |
+| 7 | Limiting Results |
+| 8 | Aggregate Functions |
+| 9 | Grouping Data |
+| 10 | Relationships |
+| 11 | Joins |
+| 12 | Many-to-Many Relationships |
+| 13 | Subqueries |
+| 14 | Views |
+| 15 | Final Challenge |
+
+---
+
+Good luck, and enjoy building your first relational database!
