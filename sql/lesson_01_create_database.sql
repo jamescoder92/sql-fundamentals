@@ -1,71 +1,144 @@
--- ==========================================================
--- SQL Fundamentals
--- Lesson 1: Creating Your First SQLite Database
--- ==========================================================
+-- ============================================================
+-- SQL FUNDAMENTALS
+-- Lesson 1: Creating Your First Database
+-- ============================================================
 
--- NOTE:
+-- Welcome!
 --
--- SQLite databases are simply files.
+-- Throughout this course, you'll build a complete
+-- Moringa School Employee Management System using SQLite.
 --
--- Unlike MySQL or PostgreSQL, you do NOT use SQL to create
--- the database itself.
+-- Before we can store any data, we need a database.
+
+---------------------------------------------------------------
+-- What is a Database?
+---------------------------------------------------------------
+
+-- A database is an organised collection of related information.
 --
--- Instead, create the database from your terminal.
+-- Think of it as a digital filing cabinet.
 --
--- ----------------------------------------------------------
--- Terminal Command
--- ----------------------------------------------------------
+-- A database can contain:
 --
--- sqlite3 database/moringa.db
+-- • Tables
+-- • Relationships
+-- • Records
 --
--- If the file does not exist, SQLite creates it automatically.
+-- SQLite stores an entire database in a single file.
+
+---------------------------------------------------------------
+-- Creating the Database
+---------------------------------------------------------------
+
+-- SQLite creates databases from the terminal.
 --
--- After running the command, you'll enter the SQLite shell:
+-- Open your terminal.
+--
+-- Navigate to your project directory.
+--
+-- Then create a database named:
+--
+-- moringa.db
+--
+-- inside the database/ folder.
+--
+-- Hint:
+--
+-- sqlite3 <database_path>
+
+---------------------------------------------------------------
+-- SQLite Shell
+---------------------------------------------------------------
+
+-- After opening the database you'll see:
 --
 -- sqlite>
 --
--- ----------------------------------------------------------
--- Useful SQLite Commands
--- ----------------------------------------------------------
+-- This means you're connected to the database.
+
+---------------------------------------------------------------
+-- SQLite Commands
+---------------------------------------------------------------
+
+-- Try the following commands.
 --
 -- .databases
---      Shows attached databases.
 --
+-- What information does it display?
+--
+---------------------------------------------------------------
+
 -- .tables
---      Lists every table.
 --
+-- Do you see any tables?
+--
+-- Why or why not?
+
+---------------------------------------------------------------
+
 -- .schema
---      Shows the database schema.
 --
+-- What does it return?
+
+---------------------------------------------------------------
+
 -- .quit
---      Exit SQLite.
 --
--- .headers on
---      Show column names.
---
--- .mode table
---      Display results in table format.
---
--- ----------------------------------------------------------
--- SQL vs SQLite Commands
--- ----------------------------------------------------------
---
+-- Exit SQLite.
+
+---------------------------------------------------------------
+-- Notes
+---------------------------------------------------------------
+
 -- Commands beginning with "." are SQLite shell commands.
 --
--- They DO NOT end with a semicolon.
---
--- Example:
+-- Examples:
 --
 -- .tables
+-- .schema
+-- .headers on
+-- .mode table
 --
--- SQL statements ARE different.
+-- These commands:
+--
+-- • only work inside SQLite
+-- • do NOT end with a semicolon
+
+---------------------------------------------------------------
+
+-- SQL statements are different.
 --
 -- Example:
 --
 -- SELECT * FROM employees;
 --
 -- SQL statements ALWAYS end with a semicolon.
+
+---------------------------------------------------------------
+-- Reflection
+---------------------------------------------------------------
+
+-- Why doesn't a new database contain any tables?
 --
--- Lesson Complete!
+-- What is the difference between
 --
--- In Lesson 2 we'll create our first tables.
+-- .tables
+--
+-- and
+--
+-- SELECT * FROM employees;
+
+---------------------------------------------------------------
+-- Verification
+---------------------------------------------------------------
+
+-- Before moving on ensure:
+--
+-- ✓ moringa.db exists
+-- ✓ You can open SQLite
+-- ✓ You can exit SQLite
+-- ✓ .tables returns no tables
+
+---------------------------------------------------------------
+-- End of Lesson
+---------------------------------------------------------------
