@@ -47,23 +47,38 @@ sqlite3 --version
 
 ---
 
-# Repository Structure
+---
 
-```
+## Repository Structure
+
+The project layout is organized sequentially by lesson, separating the core SQLite database files from the SQL query scripts:
+
+```plaintext
 sql-fundamentals/
-
+│
 ├── README.md
+├── .gitignore
 ├── assets/
 ├── database/
-│   └── moringa.db
+│   ├── moringa.db
+│   └── backups/
 └── sql/
     ├── lesson_01_create_database.sql
     ├── lesson_02_create_tables.sql
     ├── lesson_03_insert_data.sql
-    └── ...
+    ├── lesson_04_select.sql
+    ├── lesson_05_filtering.sql
+    ├── lesson_06_sorting.sql
+    ├── lesson_07_limit.sql
+    ├── lesson_08_aggregations.sql
+    ├── lesson_09_group_by.sql
+    ├── lesson_10_relationships.sql
+    ├── lesson_11_joins.sql
+    ├── lesson_12_many_to_many.sql
+    ├── lesson_13_subqueries.sql
+    ├── lesson_14_views.sql
+    └── lesson_15_final_challenge.sql
 ```
-
----
 
 # About This Course
 
